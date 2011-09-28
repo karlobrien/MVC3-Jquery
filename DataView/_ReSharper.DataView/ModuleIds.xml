@@ -1,0 +1,4 @@
+<Modules>
+  <Module PersistentId="AEBC127B-9F37-49D1-947E-7A764B3B12D8" ModuleId="DataView" />
+  <Module PersistentId="59BC2C86-23A8-4656-913B-29FF965479EE" ModuleId="DataView.Tests" />
+</Modules>

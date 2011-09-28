@@ -1,0 +1,7 @@
+F:\Visual Studio Projects\DataView\DataView\bin\DataView.dll
+F:\Visual Studio Projects\DataView\DataView\bin\DataView.pdb
+F:\Visual Studio Projects\DataView\DataView\bin\EntityFramework.dll
+F:\Visual Studio Projects\DataView\DataView\bin\EntityFramework.xml
+F:\Visual Studio Projects\DataView\DataView\obj\Debug\ResolveAssemblyReference.cache
+F:\Visual Studio Projects\DataView\DataView\obj\Debug\DataView.dll
+F:\Visual Studio Projects\DataView\DataView\obj\Debug\DataView.pdb

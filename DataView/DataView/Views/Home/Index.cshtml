@@ -1,0 +1,218 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+ <script type="text/javascript">
+
+     $(function () {
+         $("#list").jqGrid({
+             url: '/Home/ExchangeGrid/',
+             datatype: 'json',
+             //mtype: 'GET',
+             AddressGrid: 1,
+             colNames: ['Id', 'Codes', 'Description'],
+             colModel: [
+          { name: 'Id', index: 'Id', width: 40, align: 'left' },
+          { name: 'Codes', index: 'Codes', width: 200, align: 'left' },
+          { name: 'Description', index: 'Description', width: 500, align: 'left'}],
+             pager: jQuery('#pager'),
+             rowNum: 10,
+             rowList: [5, 10, 20, 50],
+             sortname: 'Id',
+             sortorder: "desc",
+             viewrecords: true,
+             hiddengrid: false,
+             imgpath: '/scripts/themes/coffee/images',
+             caption: 'Exchange Codes',
+             multiselect: false,
+             onSelectRow: function (ids) {
+                 if (ids == null) {
+                        ids = 0;
+                        if (jQuery("#address").jqGrid('getGridParam','records') >0 )
+                        {
+                            jQuery("#address").jqGrid('getGridParam',{url:"/Home/AddressGrid/?AddressGrid=" + rowKey,page:1});
+                            jQuery("#address").jqGrid('setCaption',"Multicast + TCP Addresses: "+ids).trigger('reloadGrid');   
+                        }
+                 }
+                 else {
+                        jQuery("#address").jqGrid('setGridParam',{url:"/Home/AddressGrid/?AddressGrid="+ids,page:1}); 
+                        jQuery("#address").jqGrid('setCaption',"Multicast + TCP Addresses: "+ids).trigger('reloadGrid'); 
+                 }
+                 
+                 
+                 //GetAddresses(ids);
+                 //GetUsageDetails(ids);
+                 //GetFeedDetails(ids);
+                                         }
+         });
+
+         var rowKey = 0;
+
+         jQuery("#address").jqGrid({
+                url: "/Home/AddressGrid/?AddressGrid=" + rowKey,
+                datatype: 'json',
+                data: "{AddressGrid=" + rowKey + "}",
+                //mtype: 'GET',
+                colNames: ['Id', 'Address', 'Port'],
+                colModel: [
+          { name: 'Id', index: 'Id', width: 40, align: 'left' },
+          { name: 'Address', index: 'Address', width: 200, align: 'left' },
+          { name: 'Port', index: 'Port', width: 500, align: 'left'}],
+                pager: jQuery('#address_pager'),
+                rowNum: 10,
+                rowList: [5, 10, 20, 50],
+                sortname: 'Id',
+                sortorder: "desc",
+                hiddengrid: true,
+                viewrecords: true,
+                imgpath: '/scripts/themes/coffee/images',
+                caption: 'Multicast + TCP Addresses',
+                multiselect: false,
+            });
+
+        $("#usage").jqGrid({
+                url: '/Home/UsageGrid/',
+                datatype: 'json',
+                mtype: 'GET',
+                colNames: ['Id', 'Address', 'Port'],
+                colModel: [
+          { name: 'Id', index: 'Id', width: 40, align: 'left' },
+          { name: 'Address', index: 'Address', width: 200, align: 'left' },
+          { name: 'Port', index: 'Port', width: 500, align: 'left'}],
+                pager: jQuery('#usage_pager'),
+                rowNum: 10,
+                rowList: [5, 10, 20, 50],
+                sortname: 'Id',
+                sortorder: "desc",
+                hiddengrid: true,
+                viewrecords: true,
+                imgpath: '/scripts/themes/coffee/images',
+                caption: 'Dingo Usage Data',
+                multiselect: false,
+            });
+
+         $("#feed").jqGrid({
+                url: '/Home/UsageGrid/',
+                datatype: 'json',
+                mtype: 'GET',
+                colNames: ['Id', 'Address', 'Port'],
+                colModel: [
+          { name: 'Id', index: 'Id', width: 40, align: 'left' },
+          { name: 'Address', index: 'Address', width: 200, align: 'left' },
+          { name: 'Port', index: 'Port', width: 500, align: 'left'}],
+                pager: jQuery('#feed_pager'),
+                rowNum: 10,
+                rowList: [5, 10, 20, 50],
+                sortname: 'Id',
+                sortorder: "desc",
+                hiddengrid: true,
+                viewrecords: true,
+                imgpath: '/scripts/themes/coffee/images',
+                caption: 'Feed Data',
+                multiselect: false,
+            });
+
+     }); 
+
+     function GetAddresses(rowKey) {
+        if (rowKey > 0) {
+            jQuery("#address").jqGrid({
+                url: "/Home/AddressGrid/?AddressGrid=" + rowKey,
+                datatype: 'json',
+                data: "{AddressGrid=" + rowKey + "}",
+                //mtype: 'GET',
+                colNames: ['Id', 'Address', 'Port'],
+                colModel: [
+          { name: 'Id', index: 'Id', width: 40, align: 'left' },
+          { name: 'Address', index: 'Address', width: 200, align: 'left' },
+          { name: 'Port', index: 'Port', width: 500, align: 'left'}],
+                pager: jQuery('#address_pager'),
+                rowNum: 10,
+                rowList: [5, 10, 20, 50],
+                sortname: 'Id',
+                sortorder: "desc",
+                hiddengrid: true,
+                viewrecords: true,
+                imgpath: '/scripts/themes/coffee/images',
+                caption: 'Multicast + TCP Addresses',
+                multiselect: false,
+            });
+            jQuery("#address").jqGrid().trigger('reloadGrid');
+        }
+        }
+
+     function GetUsageDetails(rowKey) {
+        if (rowKey > 0) {
+            $("#usage").jqGrid({
+                url: '/Home/UsageGrid/',
+                datatype: 'json',
+                mtype: 'GET',
+                colNames: ['Id', 'Address', 'Port'],
+                colModel: [
+          { name: 'Id', index: 'Id', width: 40, align: 'left' },
+          { name: 'Address', index: 'Address', width: 200, align: 'left' },
+          { name: 'Port', index: 'Port', width: 500, align: 'left'}],
+                pager: jQuery('#usage_pager'),
+                rowNum: 10,
+                rowList: [5, 10, 20, 50],
+                sortname: 'Id',
+                sortorder: "desc",
+                hiddengrid: true,
+                viewrecords: true,
+                imgpath: '/scripts/themes/coffee/images',
+                caption: 'Dingo Usage Data',
+                multiselect: false,
+            });
+     }
+     }
+
+     function GetFeedDetails(rowKey) {
+        if (rowKey > 0) {
+            $("#feed").jqGrid({
+                url: '/Home/UsageGrid/',
+                datatype: 'json',
+                mtype: 'GET',
+                colNames: ['Id', 'Address', 'Port'],
+                colModel: [
+          { name: 'Id', index: 'Id', width: 40, align: 'left' },
+          { name: 'Address', index: 'Address', width: 200, align: 'left' },
+          { name: 'Port', index: 'Port', width: 500, align: 'left'}],
+                pager: jQuery('#feed_pager'),
+                rowNum: 10,
+                rowList: [5, 10, 20, 50],
+                sortname: 'Id',
+                sortorder: "desc",
+                hiddengrid: true,
+                viewrecords: true,
+                imgpath: '/scripts/themes/coffee/images',
+                caption: 'Feed Data',
+                multiselect: false,
+            });
+     }
+     }
+
+ </script> 
+
+<h2>@ViewBag.Message</h2>
+
+<table id="list" class="scroll" cellpadding="0" cellspacing="0"></table>
+<div id="pager" class="scroll" style="text-align:center;"></div>
+
+<br />
+
+<table id="address" class="scroll" cellpadding="0" cellspacing="0"></table>
+<div id="address_pager" class="scroll" style="text-align:center;"></div>
+
+<br />
+
+<table id="usage" class="scroll" cellpadding="0" cellspacing="0"></table>
+<div id="usage_pager" class="scroll" style="text-align:center;"></div>
+
+<br />
+
+<table id="feed" class="scroll" cellpadding="0" cellspacing="0"></table>
+<div id="feed_pager" class="scroll" style="text-align:center;"></div>
+
+<p>
+    This was developed by <a href="www.karlobrien.ie" title="Karl's Site">http://www.karlobrien.ie</a>.
+</p>

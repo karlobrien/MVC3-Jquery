@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataView", "DataView\DataView.csproj", "{AEBC127B-9F37-49D1-947E-7A764B3B12D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataView.Tests", "DataView.Tests\DataView.Tests.csproj", "{59BC2C86-23A8-4656-913B-29FF965479EE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AEBC127B-9F37-49D1-947E-7A764B3B12D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEBC127B-9F37-49D1-947E-7A764B3B12D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEBC127B-9F37-49D1-947E-7A764B3B12D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEBC127B-9F37-49D1-947E-7A764B3B12D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59BC2C86-23A8-4656-913B-29FF965479EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59BC2C86-23A8-4656-913B-29FF965479EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59BC2C86-23A8-4656-913B-29FF965479EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59BC2C86-23A8-4656-913B-29FF965479EE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

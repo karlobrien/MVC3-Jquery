@@ -1,0 +1,8 @@
+F:\Visual Studio Projects\DataView\DataView.Tests\bin\Debug\DataView.Tests.dll.config
+F:\Visual Studio Projects\DataView\DataView.Tests\bin\Debug\DataView.Tests.dll
+F:\Visual Studio Projects\DataView\DataView.Tests\bin\Debug\DataView.Tests.pdb
+F:\Visual Studio Projects\DataView\DataView.Tests\bin\Debug\DataView.dll
+F:\Visual Studio Projects\DataView\DataView.Tests\bin\Debug\DataView.pdb
+F:\Visual Studio Projects\DataView\DataView.Tests\obj\Debug\ResolveAssemblyReference.cache
+F:\Visual Studio Projects\DataView\DataView.Tests\obj\Debug\DataView.Tests.dll
+F:\Visual Studio Projects\DataView\DataView.Tests\obj\Debug\DataView.Tests.pdb

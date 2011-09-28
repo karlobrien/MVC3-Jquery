@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="3d53d75b-98bd-408a-85aa-26c7a98f9385" name="Karl@JUMPERCAKE 2011-09-28 11:13:10" runUser="jumpercake\Karl" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="821b25be-44d6-4dc8-a6ae-a6484fdd349a">
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+    <Deployment runDeploymentRoot="Karl_JUMPERCAKE 2011-09-28 11_13_10" />
+  </TestSettings>
+  <Times creation="2011-09-28T11:13:10.6184231+01:00" queuing="2011-09-28T11:13:11.1944560+01:00" start="2011-09-28T11:13:11.4054681+01:00" finish="2011-09-28T11:13:11.7484877+01:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="ExchangeGrid" storage="f:\visual studio projects\dataview\dataview.tests\bin\debug\dataview.tests.dll" id="effff98d-6bd4-0b68-e702-784e95bc65d2">
+      <Execution timeOut="1800000" id="322331f0-8486-4468-a667-9ddb85790fc3" />
+      <TestMethod codeBase="F:/Visual Studio Projects/DataView/DataView.Tests/bin/Debug/DataView.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="DataView.Tests.Controllers.HomeControllerTest, DataView.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ExchangeGrid" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="effff98d-6bd4-0b68-e702-784e95bc65d2" executionId="322331f0-8486-4468-a667-9ddb85790fc3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="322331f0-8486-4468-a667-9ddb85790fc3" testId="effff98d-6bd4-0b68-e702-784e95bc65d2" testName="ExchangeGrid" computerName="JUMPERCAKE" duration="00:00:00.1331501" startTime="2011-09-28T11:13:11.4574711+01:00" endTime="2011-09-28T11:13:11.6654830+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="322331f0-8486-4468-a667-9ddb85790fc3">
+    </UnitTestResult>
+  </Results>
+</TestRun>
